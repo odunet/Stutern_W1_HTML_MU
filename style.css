@@ -1,37 +1,212 @@
-footer>ul {
-    display: flex;
-    flex-direction: row;
+/* Styling for the entire content */
+body {
+  display: block;
+  font-family: 'Gamja Flower', cursive;
+  width: 80%;
+  margin: auto;
+  height: 2000px;
+}
+
+/* Styling for the main heading */
+.container1 {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  background-color: #e4572e;
+}
+
+/* Styling for nav's unordered list and components */
+nav > ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: center;
+  align-content: center;
+}
+nav > ul > li:nth-child(2), li:nth-child(3) {
+  padding-left: 100px;
+  ransition: transform 500ms ease;
+}
+nav > ul > li:hover {
+  transform: skewX(20deg);
+}
+nav > ul > li > a {
+  text-decoration: none;
+  color: black;
+}
+nav > ul > li > a:hover {
+  color: red;
+}
+
+/* Styling for the notification bar */
+#notification {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+/* Styling for all buttons */
+.btn {
+  font-family: 'Gamja Flower', cursive;
+  margin-left: 10px;
+  transition: transform 500ms ease;
+  will-change: transform;
+  cursor: pointer;
+}
+
+/* All button animation */
+  .btn:hover {
+    transform: translateY(-3px);
+    transition: transform 500ms;
   }
-  
-  table {
-    padding-bottom: 20px;
-  }
-  
-  td , th {
+
+/* Styling for nave bar button and text field */
+#btn, #count {
+  width: 500px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  margin-left: 20px;
+}
+
+/* Styling for page section  */
+.container2 {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  background-color: #fffff2;
+}
+
+/* /Styling for all H1 */
+h1 {
+  font-family: 'Chelsea Market', cursive;
+  margin-bottom: 0px;
+  text-decoration: underline;
+}
+
+/* Styling for all section, this gives the distinct border */
+section {
+  border: 4px solid #050401; 
+  box-shadow: 3px 3px 0 0 #e4572e; 
+}
+
+/* Styling to create space between sections */
+#spacer {
+  height: 30px;
+}
+
+/* Stlying for section containing user logs */
+.last_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+/* Styling for forms */
+form {
+  display: flex;
+  flex-direction: row;
+  width:80%;
+  margin: auto;
+}
+
+form > label {
+  margin-left: 20px;
+}
+
+input {
+  margin-left: 5px;
+  border-radius: 10px;
+  height: 50px;
+}
+
+input:hover, textarea:hover {
+  border: 2px solid blue;
+}
+
+/* Styling for table and table components */
+table {
+  width: 80%;
+  margin: auto;
+  border-collapse: collapse;
+  padding-bottom: 20px;
+}
+td , th {
+    transition: transform 500ms ease;
+    will-change: transform;
+    transition-delay: 300ms;  
     border: solid;
-  }
-  
-  footer {
-    display: block;
-    background-color: grey;
-    width: 500px;
-  }
-  
-  footer > ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  footer > ul > li {
-    padding: 20px;
-  }
-  
-  footer > ul > li > a {
-    text-decoration: none;
-    color: black;
-  }
-  
-  li > a:hover {
-    color: red;
-  }
+}
+td:hover , th:hover{
+  color: blue;
+  transform: translateY(-5px);
+  transition: transform 500ms;
+}
+
+/* Styling for section's unordered list */
+section > ul {
+    list-style-position: inside;
+}
+
+/* Styling for footer */
+nav {
+  background-color: #e4572e;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 80%;
+  margin: auto;
+}
+
+/* Scroll Bar */
+    body::-webkit-scrollbar {
+      width: 0.5em;
+    }
+
+    body::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+
+    body::-webkit-scrollbar-thumb {
+      background-color: #e4572e;
+      outline: 1px solid #e4572e;
+    }
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
